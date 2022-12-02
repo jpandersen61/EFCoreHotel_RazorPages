@@ -27,7 +27,7 @@ namespace EFCoreHotel_RazorPages
         }
         public void OnGet()
         {
-           Bookings= bookingService.GetBookings();
+           Bookings= bookingService.GetBookings(DateFrom,DateTo);
         }
     }
 }

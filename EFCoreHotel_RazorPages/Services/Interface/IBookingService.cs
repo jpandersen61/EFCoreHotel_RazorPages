@@ -9,5 +9,6 @@ namespace EFCoreHotel_RazorPages.Services.Interface
    public  interface IBookingService
     {
         public IEnumerable<Booking> GetBookings();
+        public IEnumerable<Booking> GetBookings(DateTime from, DateTime to);
     }
 }

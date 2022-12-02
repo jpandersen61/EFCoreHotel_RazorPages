@@ -5,6 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+
+
+
 
 namespace EFCoreHotel_RazorPages.Services.EFService
 {
@@ -18,6 +22,18 @@ namespace EFCoreHotel_RazorPages.Services.EFService
         public IEnumerable<Hotel> GetHotels()
         {
             return context.Hotels;
+        }
+
+        public Hotel GetHotel(int hotelNo)
+        {
+            var hotel = context.Hotels
+            .Include(h => h.Rooms)
+            .ThenInclude(r => r.Bookings)
+            .ThenInclude(g => g.GuestNoNavigation)
+            .AsNoTracking()
+            .FirstOrDefault(h => h.HotelNo  == hotelNo);
+
+            return hotel;
         }
     }
 }

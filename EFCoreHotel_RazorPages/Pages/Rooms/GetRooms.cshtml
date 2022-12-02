@@ -18,6 +18,7 @@
 <table class="table">
     <thead>
         <tr>
+            <th>  Hotel  </th>
             <th>  Room No  </th>
             <th> Price  </th>
             <th> Types </th>
@@ -31,6 +32,7 @@
             @foreach (var item in Model.Rooms)
             {
         <tr>
+            <td> @item.HotelNoNavigation.Name  </td>
             <td> @item.RoomNo  </td>
             <td>  @item.Price </td>
             <td>  @item.Types </td>

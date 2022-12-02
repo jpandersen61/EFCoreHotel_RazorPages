@@ -20,5 +20,23 @@ namespace EFCoreHotel_RazorPages.Services.EFService
         {
             return context.Bookings;     
         }
+
+        public IEnumerable<Booking> GetBookings(DateTime from, DateTime to)
+        {
+            IEnumerable<Booking> result = context.Bookings;
+
+            if (from.Ticks > 0)
+            {
+                result = result.Where(r => r.DateFrom.Ticks == from.Ticks);
+            }
+
+            if (to.Ticks > 0)
+            {
+                result = result.Where(r => r.DateTo.Ticks == to.Ticks);
+            }
+
+            return result;
+        }
+
     }
 }

@@ -33,7 +33,13 @@ namespace EFCoreHotel_RazorPages.Services.EFService
 
         public IEnumerable<Room> GetRooms(string typeFilter, double priceFrom, double priceTo)
         {
-            IEnumerable<Room> result = context.Rooms;
+            //IEnumerable<Room> result = context.Rooms;
+
+            IEnumerable<Room> result = context.Rooms
+            .Include(r => r.HotelNoNavigation)
+            .AsNoTracking();
+          
+            
 
             if (typeFilter != null)
             {

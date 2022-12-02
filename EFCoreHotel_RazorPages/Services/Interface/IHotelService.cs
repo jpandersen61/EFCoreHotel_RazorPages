@@ -9,5 +9,6 @@ namespace EFCoreHotel_RazorPages.Services.Interface
   public   interface IHotelService
     {
         public IEnumerable<Hotel> GetHotels();
+        public Hotel GetHotel(int hotelNo);
     }
 }

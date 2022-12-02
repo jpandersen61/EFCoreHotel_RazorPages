@@ -23,6 +23,11 @@
             <td>@item.HotelNo  </td>
             <td>  @item.Name </td>
             <td>  @item.Address </td>
+            <td>
+                 <p>
+                      <a asp-page="/Hotels/ShowHotel" asp-route-hid="@item.HotelNo">Show Hotel Info</a> 
+                 </p>
+            </td>
        </tr>
             }
         }
