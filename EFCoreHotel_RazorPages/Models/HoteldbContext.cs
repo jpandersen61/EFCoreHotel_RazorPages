@@ -3,6 +3,8 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using EFCoreHotel_RazorPages.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 #nullable disable
 

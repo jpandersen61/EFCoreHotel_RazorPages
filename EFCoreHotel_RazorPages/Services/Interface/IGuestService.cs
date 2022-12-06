@@ -9,5 +9,10 @@ namespace EFCoreHotel_RazorPages.Services.Interface
     public interface IGuestService
     {
         public IEnumerable<Guest> GetGuests();
+        public void AddGuest(Guest guest);
+        public int GetMaxGuestNo();
+        public Guest GetGuest(int guestNo);
+
+        public void RemoveGuest(int guestNo);
     }
 }

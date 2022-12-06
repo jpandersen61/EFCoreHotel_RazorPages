@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreHotel_RazorPages", "EFCoreHotel_RazorPages\EFCoreHotel_RazorPages.csproj", "{F4E206A3-468A-4EE8-B5BF-F67D116C3758}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHotel", "TestHotel\TestHotel.csproj", "{6F4BDE46-F486-4EB9-B2A9-7A182868BD77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F4E206A3-468A-4EE8-B5BF-F67D116C3758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4E206A3-468A-4EE8-B5BF-F67D116C3758}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4E206A3-468A-4EE8-B5BF-F67D116C3758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F4BDE46-F486-4EB9-B2A9-7A182868BD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4BDE46-F486-4EB9-B2A9-7A182868BD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4BDE46-F486-4EB9-B2A9-7A182868BD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4BDE46-F486-4EB9-B2A9-7A182868BD77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

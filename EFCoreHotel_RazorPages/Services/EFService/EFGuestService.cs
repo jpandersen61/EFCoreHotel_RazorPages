@@ -4,7 +4,6 @@ using EFCoreHotel_RazorPages.Services.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace EFCoreHotel_RazorPages.Services.EFService
 {
@@ -18,6 +17,39 @@ namespace EFCoreHotel_RazorPages.Services.EFService
         public IEnumerable<Guest> GetGuests()
         {
             return context.Guests;
+        }
+
+        public void AddGuest(Guest guest)
+        {
+            context.Guests.Add(guest);
+            context.SaveChanges();
+        }
+
+        public int GetMaxGuestNo()
+        {
+            int result = 0;
+
+            if (context.Guests.Count<Guest>() > 0)
+            {
+                result = context.Guests.ToList<Guest>().Max<Guest>(g => g.GuestNo);
+            }
+
+            return result;
+        }
+
+        public Guest GetGuest(int guestNo)
+        {
+            Guest result = null;
+
+            result = context.Guests.Find(guestNo);
+
+            return result;
+        }
+
+        public void RemoveGuest(int guestNo)
+        {
+            context.Guests.Remove(GetGuest(guestNo));
+            context.SaveChanges();
         }
     }
 }
